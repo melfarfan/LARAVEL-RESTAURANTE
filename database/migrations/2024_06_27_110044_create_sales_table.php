@@ -20,8 +20,6 @@ class CreateSalesTable extends Migration
             $table->decimal('total_amount', 10, 2);
             $table->timestamps();
 
-
-
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade'); // Añade esta línea
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

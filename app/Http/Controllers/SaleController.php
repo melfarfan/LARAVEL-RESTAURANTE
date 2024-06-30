@@ -136,8 +136,9 @@ class SaleController extends Controller
 
     public function show(Sale $sale)
    {
-    $sale->load('customer', 'saleDetails.product'); // Carga las relaciones necesarias
-    return view('sales.show', compact('sale'));
+    dd($sale);
+    // $sale->load('customer', 'saleDetails.product'); // Carga las relaciones necesarias
+    // return view('sales.show', compact('sale'));
    }
 
 

@@ -25,6 +25,6 @@ class Sale extends Model
 
     public function saleDetails()
     {
-        return $this->hasMany(SaleDetail::class);
+        return $this->belongsToMany(Product::class, 'SaleDetail','sale_id','product_id')->withPivot('quantity','unit_price','subtotal');
     }
 }
